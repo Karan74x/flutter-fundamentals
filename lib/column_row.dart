@@ -7,27 +7,39 @@ class ColumnRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //Adding 2 shapes using column
-      body:Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 50,
-                width: 100,
-                color: Colors.red,
+      body:Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  color: Colors.red,
+                ),
               ),
-            ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 50,
-                width: 100,
-                color: Colors.blue,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  color: Colors.blue,
+                ),
               ),
-            )
-          ],
-        ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 50,
+                  width: 100,
+                  color: Colors.green,
+                ),
+              )
+
+            ],
+          ),
+      ),
       );
   }
 }
