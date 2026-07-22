@@ -1,4 +1,4 @@
-import 'package:first_flutter_app/column_row.dart';
+import 'package:first_flutter_app/image_example.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ColumnRow(),
+      home: ImageExample(),
     );
   }
 }
