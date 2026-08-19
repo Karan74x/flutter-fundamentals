@@ -110,7 +110,7 @@ class Shapespractice extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(height: 50, width: 80, color: Colors.grey),
-                  ),
+                  ), 
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(height: 50, width: 80, color: Colors.grey),
