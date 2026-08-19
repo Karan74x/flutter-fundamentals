@@ -15,7 +15,7 @@ class TextfieldExample extends StatelessWidget {
           // allows the user to type text
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
+            child: SizedBox(
               width: 300,
               // For name input
               child: TextField(
@@ -44,7 +44,7 @@ class TextfieldExample extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
+            child: SizedBox(
               width: 300,
               child: TextField(
                 controller: password,
