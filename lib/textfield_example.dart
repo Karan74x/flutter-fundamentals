@@ -48,6 +48,7 @@ class TextfieldExample extends StatelessWidget {
               width: 300,
               child: TextField(
                 controller: password,
+                obscureText: true,
                 decoration: InputDecoration(
                   label: Text("Password"),
                   suffixIcon: Icon(Icons.remove_red_eye),

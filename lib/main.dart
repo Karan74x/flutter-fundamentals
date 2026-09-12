@@ -1,4 +1,4 @@
-import 'package:first_flutter_app/buttons.dart';
+import 'package:first_flutter_app/login/LoginScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Buttons(),
+      home: Loginscreen(),
     );
   }
 }
