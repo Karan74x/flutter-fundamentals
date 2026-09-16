@@ -5,15 +5,14 @@ import 'package:http/http.dart' as http;
 import '../login/LoginModel.dart';
 
 class Apiservices {
-  Future<User> getData() async {
-    const url = "https://jsonplaceholder.typicode.com/users/1";
+  //This function(Future) will  return a User, and it may need to wait
+  Future<User> getUser() async {
+    final res = await http.get(
+      Uri.parse("https://jsonplaceholder.typicode.com/users/1"),
+    );
 
-    final response = await http.get(Uri.parse(url));
-
-    //Convert the JSON response into Dart data.
-    final jsonData = jsonDecode(response.body);
-
-    // Convert that data into our User object.
+    // jsonDecode() converts JSON data into Dart data.
+    final jsonData = jsonDecode(res.body);
 
     return User.fromJson(jsonData);
   }

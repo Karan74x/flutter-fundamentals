@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
-import '../api/ApiServices.dart';
+import './LoginController.dart';
 
-class Loginscreen extends StatefulWidget {
-  const Loginscreen({super.key});
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
 
   @override
-  State<Loginscreen> createState() => _LoginscreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginscreenState extends State<Loginscreen> {
+class _LoginScreenState extends State<LoginScreen> {
   String userData = "";
+
+  final controller = Logincontroller();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orangeAccent,
-        title: Text("API Example", style: TextStyle(color: Colors.black87)),
         centerTitle: true,
+        title: Text("API Example"),
+        backgroundColor: Colors.blueGrey,
       ),
 
       body: Center(
@@ -27,7 +29,7 @@ class _LoginscreenState extends State<Loginscreen> {
           children: [
             ElevatedButton(
               onPressed: () async {
-                final user = await Apiservices().getData();
+                final user = await controller.getUser();
 
                 setState(() {
                   userData =
@@ -37,26 +39,10 @@ class _LoginscreenState extends State<Loginscreen> {
                       "Email: ${user.email ?? ""}";
                 });
               },
-              child: Text(
-                "View Users",
-                style: TextStyle(color: Colors.black, fontSize: 20),
-              ),
+              child: Text("View User"),
             ),
-            SizedBox(height: 50),
-            Container(
-              width: 350,
-              height: 200,
-              child: Center(
-                child: Text(
-                  userData,
-                  style: TextStyle(color: Colors.limeAccent, fontSize: 22),
-                ),
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blueGrey,
-              ),
-            ),
+            SizedBox(height: 30),
+            Text(userData),
           ],
         ),
       ),

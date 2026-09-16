@@ -12,6 +12,7 @@ class _SplashscreenState extends State<Splashscreen> {
   //splash screen
   @override
   void initState() {
+    
     // TODO: implement initState
     super.initState();
 
